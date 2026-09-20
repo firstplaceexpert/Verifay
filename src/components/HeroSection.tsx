@@ -86,7 +86,7 @@ export function HeroSection() {
               <div className="relative flex items-center justify-center">
                 {/* Massive Bold Architectural Letter 'N' - In front of O (z-20), opens smoothly to reveal O */}
                 <span
-                  className={`font-black text-[150px] sm:text-[240px] md:text-[320px] lg:text-[400px] leading-none text-white tracking-tighter select-none drop-shadow-[0_20px_40px_rgba(15,31,26,0.18)] transition-transform duration-[1000ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                  className={`font-black text-[150px] sm:text-[240px] md:text-[320px] lg:text-[400px] leading-none tracking-tighter select-none letter-3d-monumental transition-transform duration-[1000ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${
                     isOpened
                       ? "-translate-x-[65px] sm:-translate-x-[110px] md:-translate-x-[140px] lg:-translate-x-[170px]"
                       : "translate-x-[35px] sm:translate-x-[55px] md:translate-x-[70px] lg:translate-x-[80px]"
@@ -97,7 +97,7 @@ export function HeroSection() {
 
                 {/* Massive Bold Architectural Letter 'W' - In front of O (z-20), opens smoothly to reveal O */}
                 <span
-                  className={`font-black text-[150px] sm:text-[240px] md:text-[320px] lg:text-[400px] leading-none text-white tracking-tighter select-none drop-shadow-[0_20px_40px_rgba(15,31,26,0.18)] transition-transform duration-[1000ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                  className={`font-black text-[150px] sm:text-[240px] md:text-[320px] lg:text-[400px] leading-none tracking-tighter select-none letter-3d-monumental transition-transform duration-[1000ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${
                     isOpened
                       ? "translate-x-[65px] sm:translate-x-[110px] md:translate-x-[140px] lg:translate-x-[170px]"
                       : "-translate-x-[35px] sm:-translate-x-[55px] md:-translate-x-[70px] lg:-translate-x-[80px]"

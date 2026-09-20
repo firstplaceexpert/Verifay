@@ -54,6 +54,24 @@
   background: #00C853;
 }
 
+/* Monumental 3D Architectural Lettering with Solid Extrusion and Multi-Layer Cast Shadows */
+.letter-3d-monumental {
+  color: #FFFFFF;
+  text-shadow:
+    0 1px 0 #F0F4F0,
+    0 2px 0 #E2EAE3,
+    0 3px 0 #D4DFD6,
+    0 4px 0 #C6D4C9,
+    0 5px 0 #B8C9BC,
+    0 6px 1px rgba(15, 31, 26, 0.15),
+    0 10px 20px rgba(15, 31, 26, 0.22),
+    0 20px 40px rgba(15, 31, 26, 0.28),
+    0 40px 70px rgba(15, 31, 26, 0.32),
+    0 60px 100px rgba(15, 31, 26, 0.2);
+  filter: drop-shadow(0 15px 25px rgba(15, 31, 26, 0.2))
+          drop-shadow(0 35px 55px rgba(15, 31, 26, 0.28));
+}
+
 /* Hero Architectural Entrance Animations */
 @keyframes hero-n-slide {
   0% {
