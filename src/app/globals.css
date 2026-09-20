@@ -1,0 +1,382 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --primary-green: #00C853;
+    --charcoal: #0F1F1A;
+    --soft-white: #F8FAF8;
+    --sage-light: #E8F5E9;
+    --sage-border: #C8E6C9;
+    --forest-dark: #1B3B30;
+    --charcoal-gray: #2D3E37;
+    --cool-gray: #758A82;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #0F1F1A;
+    color: #0F1F1A;
+    font-family: var(--font-sans, "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0F1F1A;
+}
+::-webkit-scrollbar-thumb {
+  background: #2D3E37;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00C853;
+}
+
+/* Hero Architectural Entrance Animations */
+@keyframes hero-n-slide {
+  0% {
+    transform: translateX(50px) scale(0.94);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-24px) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes hero-w-slide {
+  0% {
+    transform: translateX(-50px) scale(0.94);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(24px) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes hero-o-zoom {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes card-rise {
+  0% {
+    transform: translateY(28px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-hero-n {
+  animation: hero-n-slide 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-hero-w {
+  animation: hero-w-slide 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-hero-o {
+  animation: hero-o-zoom 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.1s backwards;
+}
+
+.animate-card-rise {
+  animation: card-rise 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.25s backwards;
+}
+
+/* Infinite Floating Pulse Animations */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 200, 83, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 16px rgba(0, 200, 83, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 200, 83, 0);
+  }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 2.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Subtle Slow Spin */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 22s linear infinite;
+}
+
+/* Reverse spin for counter-rotation */
+@keyframes spin-reverse-slow {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-spin-reverse-slow {
+  animation: spin-reverse-slow 25s linear infinite;
+}
+
+/* Animated SVG dashed lines */
+@keyframes dash-flow {
+  to {
+    stroke-dashoffset: -28;
+  }
+}
+
+.animate-dash-flow {
+  animation: dash-flow 1.8s linear infinite;
+}
+
+/* Subtle airplane floating & bobbing (uses opacity & subtle filter without clobbering SVG transform) */
+@keyframes airplane-float {
+  0%, 100% {
+    opacity: 0.95;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.animate-airplane-float {
+  animation: airplane-float 3s ease-in-out infinite;
+}
+
+/* Smooth Reveal Transitions for Sections */
+.ppt-section {
+  position: relative;
+}
+
+/* Base elements that animate in cleanly with pronounced slide */
+.ppt-from-bottom,
+.ppt-from-left,
+.ppt-from-right,
+.ppt-from-scale {
+  transition: transform 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Stagger delays for sequential build */
+.ppt-delay-1 { transition-delay: 100ms; }
+.ppt-delay-2 { transition-delay: 200ms; }
+.ppt-delay-3 { transition-delay: 320ms; }
+.ppt-delay-4 { transition-delay: 450ms; }
+
+/* INACTIVE: Elements waiting before section is reached */
+.ppt-inactive .ppt-from-bottom {
+  opacity: 0;
+  transform: translateY(35px);
+}
+.ppt-inactive .ppt-from-left {
+  opacity: 0;
+  transform: translateX(-60px);
+}
+.ppt-inactive .ppt-from-right {
+  opacity: 0;
+  transform: translateX(60px);
+}
+.ppt-inactive .ppt-from-scale {
+  opacity: 0;
+  transform: scale(0.93) translateY(16px);
+}
+
+/* ACTIVE: Section in view -> Elements smoothly settle in place */
+.ppt-active .ppt-from-bottom {
+  opacity: 1;
+  transform: translateY(0);
+}
+.ppt-active .ppt-from-left {
+  opacity: 1;
+  transform: translateX(0);
+}
+.ppt-active .ppt-from-right {
+  opacity: 1;
+  transform: translateX(0);
+}
+.ppt-active .ppt-from-scale {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+/* Scanner HUD radar line */
+@keyframes scan-line {
+  0% {
+    transform: translateY(0%);
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0.8;
+  }
+}
+
+.animate-scan-line {
+  animation: scan-line 2.5s ease-in-out infinite alternate;
+}
+
+/* Digital Grid Background */
+.bg-grid-pattern {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 200, 83, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 200, 83, 0.05) 1px, transparent 1px);
+}
+
+.bg-dot-pattern {
+  background-size: 24px 24px;
+  background-image: radial-gradient(rgba(15, 31, 26, 0.12) 1.2px, transparent 1.2px);
+}
+
+.bg-dot-pattern-white {
+  background-size: 24px 24px;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.2) 1.2px, transparent 1.2px);
+}
+
+/* Custom luxury glassmorphism */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.glass-panel-dark {
+  background: rgba(15, 31, 26, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Glowing text and borders */
+.text-glow-green {
+  text-shadow: 0 0 20px rgba(0, 200, 83, 0.4);
+}
+
+/* Laser scan line animation for forensic demo modal */
+@keyframes laser-sweep {
+  0% {
+    top: 0%;
+    opacity: 0.2;
+  }
+  50% {
+    top: 100%;
+    opacity: 0.9;
+  }
+  100% {
+    top: 0%;
+    opacity: 0.2;
+  }
+}
+
+.animate-laser {
+  animation: laser-sweep 2.8s ease-in-out infinite;
+}
+
+/* Beveled Chamfer Cut-out Shapes (Matching bottom hero card from Frame 4/8/16) */
+.clip-chamfer-tl {
+  clip-path: polygon(36px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 36px);
+}
+
+.clip-notch-card {
+  clip-path: polygon(
+    0% 0%,
+    calc(100% - 28px) 0%,
+    100% 28px,
+    100% 100%,
+    28px 100%,
+    0% calc(100% - 28px)
+  );
+}
+
+/* Subtle glow effects */
+.glow-green {
+  box-shadow: 0 0 30px -5px rgba(0, 200, 83, 0.35);
+}
+
+.glow-green-sm {
+  box-shadow: 0 0 15px -2px rgba(0, 200, 83, 0.35);
+}
+
+/* Image sheen shimmer sweep effect on hover */
+.img-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+.img-shimmer::after {
+  content: '';
+  position: absolute;
+  top: -60%;
+  left: -60%;
+  width: 220%;
+  height: 220%;
+  background: linear-gradient(
+    60deg,
+    transparent 35%,
+    rgba(255, 255, 255, 0.25) 50%,
+    transparent 65%
+  );
+  transform: translateX(-100%) translateY(-100%) rotate(30deg);
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+  z-index: 10;
+}
+.img-shimmer:hover::after {
+  transform: translateX(100%) translateY(100%) rotate(30deg);
+}
+
+/* Infinite continuous auto-sliding marquee for gallery above testimonials */
+@keyframes marquee-slide-continuous {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-infinite {
+  display: flex;
+  width: max-content;
+  animation: marquee-slide-continuous 36s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-infinite:hover {
+  animation-play-state: paused;
+}
