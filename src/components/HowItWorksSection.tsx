@@ -41,7 +41,7 @@ export function HowItWorksSection() {
               {/* Card 1 (Top Left - Slides from Left) */}
               <div className="w-full sm:w-80 bg-[#EBF0EC] border border-[#0F1F1A]/10 rounded-3xl p-7 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative ppt-from-left ppt-delay-1">
                 <div className="flex justify-end mb-8">
-                  <span className="text-[11px] font-mono font-bold px-3 py-1 rounded-md bg-white/90 text-[#0F1F1A] border border-[#0F1F1A]/10 shadow-xs">
+                  <span className="text-[11px] font-bold tracking-wider px-3 py-1 rounded-md bg-white/90 text-[#0F1F1A] border border-[#0F1F1A]/10 shadow-xs">
                     {steps[0].priceTag}
                   </span>
                 </div>
@@ -59,7 +59,7 @@ export function HowItWorksSection() {
               {/* Card 2 (Indented Right - Slides from Left with Delay) */}
               <div className="w-full sm:w-80 sm:ml-auto bg-[#E5ECE7] border border-[#0F1F1A]/10 rounded-3xl p-7 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative ppt-from-left ppt-delay-2">
                 <div className="flex justify-end mb-8">
-                  <span className="text-[11px] font-mono font-bold px-3 py-1 rounded-md bg-white/90 text-[#00C853] border border-[#00C853]/30 shadow-xs">
+                  <span className="text-[11px] font-bold tracking-wider px-3 py-1 rounded-md bg-white/90 text-[#00C853] border border-[#00C853]/30 shadow-xs">
                     {steps[1].priceTag}
                   </span>
                 </div>
@@ -77,7 +77,7 @@ export function HowItWorksSection() {
               {/* Card 3 (Bottom Left - Slides from Left) */}
               <div className="w-full sm:w-80 bg-[#EBF0EC] border border-[#0F1F1A]/10 rounded-3xl p-7 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative ppt-from-left ppt-delay-3">
                 <div className="flex justify-end mb-8">
-                  <span className="text-[11px] font-mono font-bold px-3 py-1 rounded-md bg-white/90 text-[#0F1F1A] border border-[#0F1F1A]/10 shadow-xs">
+                  <span className="text-[11px] font-bold tracking-wider px-3 py-1 rounded-md bg-white/90 text-[#0F1F1A] border border-[#0F1F1A]/10 shadow-xs">
                     {steps[2].priceTag}
                   </span>
                 </div>

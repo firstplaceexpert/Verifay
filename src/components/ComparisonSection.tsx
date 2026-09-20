@@ -163,7 +163,7 @@ export function ComparisonSection() {
               </div>
 
               {/* Slide Counter: e.g. 1/3, 2/3, 3/3 */}
-              <span className="text-xs font-mono font-bold tracking-widest text-[#0F1F1A]/50">
+              <span className="text-xs font-bold tracking-widest text-[#0F1F1A]/50">
                 {activeSlide + 1}/{testimonials.length}
               </span>
             </div>

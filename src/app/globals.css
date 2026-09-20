@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: var(--font-sans), "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
 @layer base {
   :root {
     --primary-green: #00C853;
@@ -14,15 +18,24 @@
 
   html {
     scroll-behavior: smooth;
+    font-family: var(--font-sans), "Plus Jakarta Sans", sans-serif;
   }
 
   body {
     background-color: #0F1F1A;
     color: #0F1F1A;
-    font-family: var(--font-sans, "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif);
+    font-family: var(--font-sans), "Plus Jakarta Sans", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
+  }
+
+  *, ::before, ::after {
+    font-family: var(--font-sans), "Plus Jakarta Sans", sans-serif;
+  }
+
+  input, button, textarea, select {
+    font-family: var(--font-sans), "Plus Jakarta Sans", sans-serif;
   }
 }
 

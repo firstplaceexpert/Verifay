@@ -43,7 +43,7 @@ export function WatermarkModal({ isOpen, onClose }: WatermarkModalProps) {
             <div>
               <h3 className="text-sm sm:text-base font-bold tracking-tight text-white flex items-center gap-2">
                 Simulasi Interaktif Solusi Proteksi Verifay
-                <span className="text-[10px] uppercase font-mono px-2 py-0.5 rounded bg-[#00C853]/20 text-[#00C853] border border-[#00C853]/40">
+                <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-[#00C853]/20 text-[#00C853] border border-[#00C853]/40">
                   Live Demo
                 </span>
               </h3>
@@ -112,7 +112,7 @@ export function WatermarkModal({ isOpen, onClose }: WatermarkModalProps) {
 
                 {/* Floating Tag Overlay Information */}
                 <div className="absolute top-4 left-4 bg-[#0F1F1A]/90 backdrop-blur-md border border-white/15 rounded-2xl p-3 max-w-xs">
-                  <span className="text-[10px] font-mono font-bold uppercase text-[#00C853] flex items-center gap-1.5">
+                  <span className="text-[10px] font-bold uppercase text-[#00C853] flex items-center gap-1.5 tracking-wider">
                     <span className="w-2 h-2 rounded-full bg-[#00C853] animate-pulse shrink-0" />
                     <span>POSISI CHIP MIKRO NFC</span>
                   </span>
@@ -131,10 +131,10 @@ export function WatermarkModal({ isOpen, onClose }: WatermarkModalProps) {
                       <div>
                         <div className="flex items-center gap-2">
                           <span className="text-xs font-black uppercase text-[#00C853]">Sertifikat Digital Terbuka</span>
-                          <span className="text-[9px] px-1.5 py-0.5 rounded bg-white/10 font-mono text-white/70">1-TAP VERIFIED</span>
+                          <span className="text-[9px] px-1.5 py-0.5 rounded bg-white/10 font-bold tracking-wider text-white/70">1-TAP VERIFIED</span>
                         </div>
                         <h4 className="text-sm font-bold text-white mt-0.5">Produk Terverifikasi 100% Asli</h4>
-                        <p className="text-[10px] font-mono text-white/60">ID Chip: #NFC-9942-VALERIUS • Token Valid</p>
+                        <p className="text-[10px] font-semibold tracking-wide text-white/60">ID Chip: #NFC-9942-VALERIUS • Token Valid</p>
                       </div>
                     </div>
                   </div>
@@ -157,7 +157,7 @@ export function WatermarkModal({ isOpen, onClose }: WatermarkModalProps) {
                 {/* Step 1: Kami */}
                 <div className="p-4 rounded-2xl bg-[#142A22] border border-[#2D3E37]">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#00C853]/20 text-[#00C853] font-bold">
+                    <span className="text-[10px] font-bold tracking-wider px-2 py-0.5 rounded bg-[#00C853]/20 text-[#00C853]">
                       TUGAS KAMI
                     </span>
                     <Cpu className="w-4 h-4 text-[#00C853]" />
@@ -172,7 +172,7 @@ export function WatermarkModal({ isOpen, onClose }: WatermarkModalProps) {
                 <div className="p-4 rounded-2xl bg-[#182620] border border-[#00C853]/40 relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-16 h-16 bg-[#00C853]/10 rounded-bl-full pointer-events-none" />
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#00C853] text-[#0F1F1A] font-extrabold">
+                    <span className="text-[10px] font-extrabold tracking-wider px-2 py-0.5 rounded bg-[#00C853] text-[#0F1F1A]">
                       TUGAS BRAND ANDA
                     </span>
                     <Layers className="w-4 h-4 text-[#00C853]" />
@@ -186,14 +186,14 @@ export function WatermarkModal({ isOpen, onClose }: WatermarkModalProps) {
                 {/* Step 3: Konsumen */}
                 <div className="p-4 rounded-2xl bg-[#142A22] border border-[#2D3E37]">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-white/10 text-white/80 font-bold">
+                    <span className="text-[10px] font-bold tracking-wider px-2 py-0.5 rounded bg-white/10 text-white/80">
                       KONSUMEN AKHIR
                     </span>
                     <Smartphone className="w-4 h-4 text-white/80" />
                   </div>
                   <h4 className="text-sm font-bold text-white mb-1">Verifikasi 1-Tap</h4>
                   <p className="text-xs text-white/70 leading-relaxed">
-                    Konsumen cukup menempelkan HP ke logo untuk membuka sertifikat orisinalitas tanpa perlu download aplikasi apapun.
+                    Konsumen tinggal mendekatkan HP ke logo brand Anda. Halaman sertifikat digital resmi langsung terbuka otomatis tanpa unduh aplikasi.
                   </p>
                 </div>
 
@@ -201,17 +201,17 @@ export function WatermarkModal({ isOpen, onClose }: WatermarkModalProps) {
 
             </div>
           ) : (
-            /* TAB 2: QR SHIELDTAG SIMULATION */
+            /* Tab 2: QR ShieldTag Interactive Simulation */
             <div className="space-y-6">
-              
-              {/* Interactive Visual Canvas */}
-              <div className="relative w-full h-[320px] sm:h-[380px] rounded-3xl overflow-hidden border border-[#2D3E37] bg-black">
+              <div className="relative h-72 sm:h-80 w-full rounded-3xl overflow-hidden bg-[#0A1612] border border-white/10 flex items-center justify-center">
                 <Image
                   src="/images/qr-shieldtag.jpg"
-                  alt="Simulasi Segel QR ShieldTag"
+                  alt="QR ShieldTag High-Security Packaging Seal"
                   fill
-                  className="object-cover object-center filter brightness-90"
+                  className="object-cover object-center"
                 />
+
+                {/* Gradient vignette */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0F1F1A] via-transparent to-[#0F1F1A]/50" />
 
                 {/* Holographic Laser Sweep */}
@@ -219,7 +219,7 @@ export function WatermarkModal({ isOpen, onClose }: WatermarkModalProps) {
 
                 {/* Floating Tag Overlay Information */}
                 <div className="absolute top-4 left-4 bg-[#0F1F1A]/90 backdrop-blur-md border border-white/15 rounded-2xl p-3 max-w-xs">
-                  <span className="text-[10px] font-mono font-bold uppercase text-[#00C853] flex items-center gap-1.5">
+                  <span className="text-[10px] font-bold uppercase text-[#00C853] flex items-center gap-1.5 tracking-wider">
                     <span className="w-2 h-2 rounded-full bg-[#00C853] animate-pulse shrink-0" />
                     <span>SEGEL OPTIK ANTI-TAMPER</span>
                   </span>
@@ -238,10 +238,10 @@ export function WatermarkModal({ isOpen, onClose }: WatermarkModalProps) {
                       <div>
                         <div className="flex items-center gap-2">
                           <span className="text-xs font-black uppercase text-[#00C853]">Segel Box Terverifikasi</span>
-                          <span className="text-[9px] px-1.5 py-0.5 rounded bg-white/10 font-mono text-white/70">ANTI-TAMPER OK</span>
+                          <span className="text-[9px] px-1.5 py-0.5 rounded bg-white/10 font-bold tracking-wider text-white/70">ANTI-TAMPER OK</span>
                         </div>
                         <h4 className="text-sm font-bold text-white mt-0.5">Kemasan Segel Utuh & Asli</h4>
-                        <p className="text-[10px] font-mono text-white/60">Batch ID: #ST-7721 • Anti-Fotokopi Teruji</p>
+                        <p className="text-[10px] font-semibold tracking-wide text-white/60">Batch ID: #ST-7721 • Anti-Fotokopi Teruji</p>
                       </div>
                     </div>
                   </div>
