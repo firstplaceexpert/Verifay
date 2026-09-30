@@ -26,7 +26,7 @@ function VerifyContent() {
 
   // URL Query Parameters with sensible luxury defaults
   const serialParam = searchParams.get("id") || searchParams.get("sn") || "VF-9821-4820";
-  const productParam = searchParams.get("product") || searchParams.get("p") || "Aura Shield Leather Jacket";
+  const productParam = searchParams.get("product") || searchParams.get("p") || "Aura Classic Leather Jacket";
   const brandParam = searchParams.get("brand") || searchParams.get("b") || "Verifay Signature Edition";
   const targetUrlParam = searchParams.get("url") || searchParams.get("link") || "https://verifay.com";
   const batchParam = searchParams.get("batch") || "BATCH-2026-A1";
@@ -108,7 +108,7 @@ function VerifyContent() {
               <ShieldCheck className="w-5 h-5" />
             </div>
             <span className="font-bold text-sm tracking-wider uppercase text-emerald-400">
-              Verifay ShieldTag
+              Verifay
             </span>
           </Link>
 
@@ -306,7 +306,7 @@ function VerifyContent() {
                   </div>
                   <div className="flex justify-between">
                     <span>Enkripsi:</span>
-                    <span className="text-gray-200">AES-128 ShieldTag Signature</span>
+                    <span className="text-gray-200">AES-128 Digital Signature</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Anti-Cloning:</span>
@@ -318,29 +318,6 @@ function VerifyContent() {
                   </div>
                 </div>
               )}
-            </div>
-
-            {/* How to Program Note for Admin/Owner */}
-            <div className="w-full bg-emerald-950/40 border border-emerald-800/40 rounded-2xl p-4 text-xs text-gray-300">
-              <div className="flex items-center gap-2 font-bold text-emerald-400 mb-1.5">
-                <Sparkles className="w-4 h-4" />
-                <span>Format URL untuk NFC Tools Anda:</span>
-              </div>
-              <p className="text-gray-400 text-[11px] mb-2">
-                Salin link di bawah ini ke menu <strong>Write &gt; URL</strong> pada aplikasi NFC Tools:
-              </p>
-              <div className="p-2.5 rounded-lg bg-[#07110E] border border-emerald-900/60 font-mono text-[11px] text-emerald-300 break-all select-all">
-                {typeof window !== "undefined"
-                  ? `${window.location.origin}/verify?id=${serialParam}&brand=${encodeURIComponent(
-                      brandParam
-                    )}&product=${encodeURIComponent(productParam)}&url=${encodeURIComponent(
-                      targetUrlParam
-                    )}`
-                  : `https://domain-anda.com/verify?id=${serialParam}&brand=${brandParam}&url=https://website-produk.com`}
-              </div>
-              <div className="mt-2 text-[10px] text-gray-400 italic">
-                *Tips: Anda bebas mengubah nama produk, nomor seri, dan link website produk sesuai kebutuhan tiap stiker tag!
-              </div>
             </div>
           </div>
         )}
