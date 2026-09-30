@@ -191,6 +191,7 @@ export default function ProgrammerPage() {
                   type="text"
                   value={prefix}
                   onChange={(e) => setPrefix(e.target.value)}
+                  style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
                   className="w-24 px-3 py-3 rounded-xl bg-[#091510] border border-emerald-950 text-white text-center text-sm font-semibold uppercase focus:outline-none focus:border-[#00C853]"
                   title="Prefix Serial"
                 />
@@ -205,7 +206,10 @@ export default function ProgrammerPage() {
                     <Minus className="w-4 h-4" />
                   </button>
 
-                  <span className="text-base font-extrabold text-[#00E676] tracking-wider tabular-nums">
+                  <span
+                    style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
+                    className="text-base font-extrabold text-[#00E676]"
+                  >
                     {String(serialNum).padStart(3, "0")}
                   </span>
 

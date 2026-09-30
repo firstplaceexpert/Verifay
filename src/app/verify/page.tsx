@@ -122,10 +122,11 @@ function VerifyContent() {
                 </span>
                 <button
                   onClick={handleCopySerial}
-                  className="inline-flex items-center gap-1 font-bold tracking-wider text-[#0F1F1A] hover:text-[#00C853] transition-colors cursor-pointer"
+                  className="inline-flex items-center gap-1.5 font-bold text-sm text-[#0F1F1A] hover:text-[#00C853] transition-colors cursor-pointer"
+                  style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
                   title="Klik untuk menyalin"
                 >
-                  <span>{serialParam}</span>
+                  <span style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>{serialParam}</span>
                   {copiedSerial ? (
                     <Check className="w-3.5 h-3.5 text-[#00C853]" />
                   ) : (
