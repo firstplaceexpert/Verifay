@@ -30,11 +30,16 @@
     overflow-x: hidden;
   }
 
-  *, ::before, ::after {
+  *,
+  ::before,
+  ::after {
     font-family: var(--font-sans), "Plus Jakarta Sans", sans-serif;
   }
 
-  input, button, textarea, select {
+  input,
+  button,
+  textarea,
+  select {
     font-family: var(--font-sans), "Plus Jakarta Sans", sans-serif;
   }
 }
@@ -43,13 +48,16 @@
 ::-webkit-scrollbar {
   width: 6px;
 }
+
 ::-webkit-scrollbar-track {
   background: #0F1F1A;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #2D3E37;
   border-radius: 9999px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #00C853;
 }
@@ -68,8 +76,7 @@
     0 20px 40px rgba(15, 31, 26, 0.28),
     0 40px 70px rgba(15, 31, 26, 0.32),
     0 60px 100px rgba(15, 31, 26, 0.2);
-  filter: drop-shadow(0 15px 25px rgba(15, 31, 26, 0.2))
-          drop-shadow(0 35px 55px rgba(15, 31, 26, 0.28));
+  filter: drop-shadow(0 15px 25px rgba(15, 31, 26, 0.2)) drop-shadow(0 35px 55px rgba(15, 31, 26, 0.28));
 }
 
 /* Hero Architectural Entrance Animations */
@@ -78,6 +85,7 @@
     transform: translateX(50px) scale(0.94);
     opacity: 0;
   }
+
   100% {
     transform: translateX(-24px) scale(1);
     opacity: 1;
@@ -89,6 +97,7 @@
     transform: translateX(-50px) scale(0.94);
     opacity: 0;
   }
+
   100% {
     transform: translateX(24px) scale(1);
     opacity: 1;
@@ -100,6 +109,7 @@
     transform: scale(0.8);
     opacity: 0;
   }
+
   100% {
     transform: scale(1);
     opacity: 1;
@@ -111,6 +121,7 @@
     transform: translateY(28px);
     opacity: 0;
   }
+
   100% {
     transform: translateY(0);
     opacity: 1;
@@ -139,10 +150,12 @@
     transform: scale(0.95);
     box-shadow: 0 0 0 0 rgba(0, 200, 83, 0.7);
   }
+
   70% {
     transform: scale(1);
     box-shadow: 0 0 0 16px rgba(0, 200, 83, 0);
   }
+
   100% {
     transform: scale(0.95);
     box-shadow: 0 0 0 0 rgba(0, 200, 83, 0);
@@ -158,6 +171,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -172,6 +186,7 @@
   from {
     transform: rotate(360deg);
   }
+
   to {
     transform: rotate(0deg);
   }
@@ -194,9 +209,12 @@
 
 /* Subtle airplane floating & bobbing (uses opacity & subtle filter without clobbering SVG transform) */
 @keyframes airplane-float {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 0.95;
   }
+
   50% {
     opacity: 0.8;
   }
@@ -217,28 +235,42 @@
 .ppt-from-right,
 .ppt-from-scale {
   transition: transform 0.75s cubic-bezier(0.16, 1, 0.3, 1),
-              opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Stagger delays for sequential build */
-.ppt-delay-1 { transition-delay: 100ms; }
-.ppt-delay-2 { transition-delay: 200ms; }
-.ppt-delay-3 { transition-delay: 320ms; }
-.ppt-delay-4 { transition-delay: 450ms; }
+.ppt-delay-1 {
+  transition-delay: 100ms;
+}
+
+.ppt-delay-2 {
+  transition-delay: 200ms;
+}
+
+.ppt-delay-3 {
+  transition-delay: 320ms;
+}
+
+.ppt-delay-4 {
+  transition-delay: 450ms;
+}
 
 /* INACTIVE: Elements waiting before section is reached */
 .ppt-inactive .ppt-from-bottom {
   opacity: 0;
   transform: translateY(35px);
 }
+
 .ppt-inactive .ppt-from-left {
   opacity: 0;
   transform: translateX(-60px);
 }
+
 .ppt-inactive .ppt-from-right {
   opacity: 0;
   transform: translateX(60px);
 }
+
 .ppt-inactive .ppt-from-scale {
   opacity: 0;
   transform: scale(0.93) translateY(16px);
@@ -249,14 +281,17 @@
   opacity: 1;
   transform: translateY(0);
 }
+
 .ppt-active .ppt-from-left {
   opacity: 1;
   transform: translateX(0);
 }
+
 .ppt-active .ppt-from-right {
   opacity: 1;
   transform: translateX(0);
 }
+
 .ppt-active .ppt-from-scale {
   opacity: 1;
   transform: scale(1) translateY(0);
@@ -268,9 +303,11 @@
     transform: translateY(0%);
     opacity: 0.8;
   }
+
   50% {
     opacity: 1;
   }
+
   100% {
     transform: translateY(100%);
     opacity: 0.8;
@@ -284,7 +321,7 @@
 /* Digital Grid Background */
 .bg-grid-pattern {
   background-size: 32px 32px;
-  background-image: 
+  background-image:
     linear-gradient(to right, rgba(0, 200, 83, 0.05) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(0, 200, 83, 0.05) 1px, transparent 1px);
 }
@@ -325,10 +362,12 @@
     top: 0%;
     opacity: 0.2;
   }
+
   50% {
     top: 100%;
     opacity: 0.9;
   }
+
   100% {
     top: 0%;
     opacity: 0.2;
@@ -345,14 +384,12 @@
 }
 
 .clip-notch-card {
-  clip-path: polygon(
-    0% 0%,
-    calc(100% - 28px) 0%,
-    100% 28px,
-    100% 100%,
-    28px 100%,
-    0% calc(100% - 28px)
-  );
+  clip-path: polygon(0% 0%,
+      calc(100% - 28px) 0%,
+      100% 28px,
+      100% 100%,
+      28px 100%,
+      0% calc(100% - 28px));
 }
 
 /* Subtle glow effects */
@@ -369,6 +406,7 @@
   position: relative;
   overflow: hidden;
 }
+
 .img-shimmer::after {
   content: '';
   position: absolute;
@@ -376,17 +414,16 @@
   left: -60%;
   width: 220%;
   height: 220%;
-  background: linear-gradient(
-    60deg,
-    transparent 35%,
-    rgba(255, 255, 255, 0.25) 50%,
-    transparent 65%
-  );
+  background: linear-gradient(60deg,
+      transparent 35%,
+      rgba(255, 255, 255, 0.25) 50%,
+      transparent 65%);
   transform: translateX(-100%) translateY(-100%) rotate(30deg);
   transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
   pointer-events: none;
   z-index: 10;
 }
+
 .img-shimmer:hover::after {
   transform: translateX(100%) translateY(100%) rotate(30deg);
 }
@@ -396,6 +433,7 @@
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }

@@ -98,12 +98,14 @@ export function HowItWorksSection() {
           {/* Right Column: Narrative Editorial (Slides from Right) */}
           <div className="lg:col-span-6 relative pl-0 lg:pl-6 ppt-from-right ppt-delay-2">
             
-            {/* Animated Curved Flight Path crossing to the left towards Card 2 */}
+            {/* Flight Path SVG Line with Moving Airplane */}
             <div className="hidden lg:block absolute -left-36 top-10 w-64 h-32 pointer-events-none">
-              <svg className="w-full h-full stroke-[#0F1F1A]/20 fill-none" viewBox="0 0 240 120">
+              <svg className="w-full h-full fill-none" viewBox="0 0 240 120">
                 <path
                   id="howItWorksJetPath"
                   d="M 230 20 Q 120 50 10 90"
+                  stroke="#0F1F1A"
+                  strokeOpacity="0.2"
                   strokeDasharray="5 5"
                   strokeWidth="1.5"
                   className="animate-dash-flow"

@@ -30,7 +30,10 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Verifay" }],
   icons: {
-    icon: "/images/verifay-icon@2x.png",
+    icon: [
+      { url: "/images/verifay-icon.svg", type: "image/svg+xml" },
+      { url: "/images/verifay-icon@2x.png", type: "image/png" },
+    ],
     apple: "/images/verifay-icon@2x.png",
   },
 };

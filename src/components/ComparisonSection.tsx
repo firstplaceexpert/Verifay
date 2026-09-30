@@ -217,7 +217,7 @@ export function ComparisonSection() {
 
         </div>
 
-        {/* Full-width Horizontal Dotted Line with Floating Airplane Gliding Smoothly along the Line */}
+        {/* Full-width Horizontal Flight Path SVG Line with Airplane */}
         <div className="relative mt-20 pt-8">
           <div className="relative w-full h-8 flex items-center justify-center">
             <svg className="w-full h-8 overflow-visible" preserveAspectRatio="none" viewBox="0 0 1000 32">

@@ -14,8 +14,8 @@ export function PresentationSection({
   className = "",
 }: PresentationSectionProps) {
   const sectionRef = useRef<HTMLDivElement>(null);
-  // Start inactive so slide-in entrance animation triggers on scroll
-  const [isActive, setIsActive] = useState(false);
+  // Default to active so initial hero is visible immediately
+  const [isActive, setIsActive] = useState(true);
 
   useEffect(() => {
     const el = sectionRef.current;
@@ -36,15 +36,12 @@ export function PresentationSection({
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setIsActive(true);
-          } else {
-            // Only reset when section is completely scrolled away
-            setIsActive(false);
           }
         });
       },
       {
-        threshold: 0.1,
-        rootMargin: "0px 0px -40px 0px",
+        threshold: 0.05,
+        rootMargin: "40px 0px -20px 0px",
       }
     );
 

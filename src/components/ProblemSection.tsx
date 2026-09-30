@@ -51,12 +51,14 @@ export function ProblemSection() {
               </span>
             </h2>
 
-            {/* Elegant Curved Dotted Trajectory Line with Jet Airplane - Positioned above in open space */}
+            {/* Flight Path SVG Line with Moving Airplane */}
             <div className="hidden lg:block absolute -right-20 -top-8 w-80 h-36 pointer-events-none z-10">
-              <svg className="w-full h-full stroke-[#0F1F1A]/20 fill-none" viewBox="0 0 320 120">
+              <svg className="w-full h-full fill-none" viewBox="0 0 320 120">
                 <path
                   id="problemJetPath"
                   d="M 10 95 Q 160 70 310 15"
+                  stroke="#0F1F1A"
+                  strokeOpacity="0.2"
                   strokeDasharray="5 5"
                   strokeWidth="1.5"
                   className="animate-dash-flow"
