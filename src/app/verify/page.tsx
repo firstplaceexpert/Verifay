@@ -88,7 +88,7 @@ function VerifyContent() {
             <span className="text-[10px] font-semibold uppercase tracking-wider text-[#6B7D76]">
               Digital Certificate of Authenticity
             </span>
-            <span className="text-[10px] font-mono text-[#8B9B94]">
+            <span className="text-[10px] font-semibold tracking-wider text-[#8B9B94]">
               {batchParam}
             </span>
           </div>
@@ -122,7 +122,7 @@ function VerifyContent() {
                 </span>
                 <button
                   onClick={handleCopySerial}
-                  className="inline-flex items-center gap-1 font-mono font-bold text-[#0F1F1A] hover:text-[#00C853] transition-colors cursor-pointer"
+                  className="inline-flex items-center gap-1 font-bold tracking-wider text-[#0F1F1A] hover:text-[#00C853] transition-colors cursor-pointer"
                   title="Klik untuk menyalin"
                 >
                   <span>{serialParam}</span>

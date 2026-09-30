@@ -177,7 +177,7 @@ export default function ProgrammerPage() {
                 value={targetUrl}
                 onChange={(e) => setTargetUrl(e.target.value)}
                 placeholder="https://..."
-                className="w-full px-4 py-3 rounded-xl bg-[#091510] border border-emerald-950 focus:border-[#00C853] text-[#00E676] font-mono text-xs focus:outline-none transition-colors"
+                className="w-full px-4 py-3 rounded-xl bg-[#091510] border border-emerald-950 focus:border-[#00C853] text-[#00E676] text-xs focus:outline-none transition-colors"
               />
             </div>
 
@@ -191,7 +191,7 @@ export default function ProgrammerPage() {
                   type="text"
                   value={prefix}
                   onChange={(e) => setPrefix(e.target.value)}
-                  className="w-24 px-3 py-3 rounded-xl bg-[#091510] border border-emerald-950 text-white font-mono text-center text-sm font-semibold uppercase focus:outline-none focus:border-[#00C853]"
+                  className="w-24 px-3 py-3 rounded-xl bg-[#091510] border border-emerald-950 text-white text-center text-sm font-semibold uppercase focus:outline-none focus:border-[#00C853]"
                   title="Prefix Serial"
                 />
 
@@ -205,7 +205,7 @@ export default function ProgrammerPage() {
                     <Minus className="w-4 h-4" />
                   </button>
 
-                  <span className="font-mono text-base font-extrabold text-[#00E676]">
+                  <span className="text-base font-extrabold text-[#00E676] tracking-wider tabular-nums">
                     {String(serialNum).padStart(3, "0")}
                   </span>
 
@@ -226,7 +226,7 @@ export default function ProgrammerPage() {
             <div className="text-[10px] text-gray-400 uppercase font-semibold tracking-wider mb-1 flex items-center justify-between">
               <span>Link Stiker #{currentSerial}:</span>
             </div>
-            <p className="font-mono text-[11px] text-emerald-300/90 truncate select-all">
+            <p className="text-[11px] text-emerald-300/90 truncate select-all">
               {getFullUrl(currentSerial)}
             </p>
           </div>
