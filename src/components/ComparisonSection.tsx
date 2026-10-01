@@ -97,8 +97,7 @@ export function ComparisonSection() {
                     {photo.tag}
                   </div>
                   {isCurrent && (
-                    <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-[#0F1F1A]/95 text-[#00C853] text-[10px] font-extrabold uppercase tracking-widest border border-[#00C853]/50 flex items-center gap-1.5 shadow-xl">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#00C853] animate-pulse" />
+                    <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-[#0F1F1A]/95 text-[#00C853] text-[10px] font-extrabold uppercase tracking-widest border border-[#00C853]/50 flex items-center shadow-xl">
                       Active Inspection
                     </div>
                   )}

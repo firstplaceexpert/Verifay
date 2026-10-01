@@ -74,8 +74,7 @@ function VerifyContent() {
           </span>
         </div>
 
-        <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-[#E5E9E5] text-[11px] font-semibold text-[#1B3B30] shadow-xs">
-          <span className="w-2 h-2 rounded-full bg-[#00C853] animate-pulse" />
+        <div className="flex items-center px-3.5 py-1 rounded-full bg-white border border-[#E5E9E5] text-[11px] font-semibold text-[#1B3B30] shadow-xs">
           <span>Sertifikat Digital Resmi</span>
         </div>
       </header>

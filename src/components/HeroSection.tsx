@@ -73,8 +73,8 @@ export function HeroSection() {
                     </text>
                   </svg>
 
-                  {/* Pulsing Center Play Button */}
-                  <div className="w-12 h-12 rounded-full bg-[#0F1F1A] border-2 border-[#00C853] flex items-center justify-center text-[#00C853] shadow-2xl group-hover:scale-110 group-hover:bg-[#00C853] group-hover:text-[#0F1F1A] transition-all duration-300 animate-pulse-ring">
+                  {/* Center Play Button */}
+                  <div className="w-12 h-12 rounded-full bg-[#0F1F1A] border-2 border-[#00C853] flex items-center justify-center text-[#00C853] shadow-2xl group-hover:scale-110 group-hover:bg-[#00C853] group-hover:text-[#0F1F1A] transition-all duration-300">
                     <Play className="w-4 h-4 fill-current ml-0.5" />
                   </div>
                 </div>

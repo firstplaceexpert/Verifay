@@ -107,13 +107,12 @@ export function WatermarkModal({ isOpen, onClose }: WatermarkModalProps) {
 
                 {/* Animated Pulse Waves on NFC Tap */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
-                  <div className={`w-28 h-28 rounded-full border-2 border-[#00C853] ${isTapped ? "animate-ping opacity-80" : "opacity-30"}`} />
+                  <div className={`w-28 h-28 rounded-full border-2 border-[#00C853] ${isTapped ? "opacity-80 scale-105" : "opacity-30"} transition-all duration-300`} />
                 </div>
 
                 {/* Floating Tag Overlay Information */}
                 <div className="absolute top-4 left-4 bg-[#0F1F1A]/90 backdrop-blur-md border border-white/15 rounded-2xl p-3 max-w-xs">
-                  <span className="text-[10px] font-bold uppercase text-[#00C853] flex items-center gap-1.5 tracking-wider">
-                    <span className="w-2 h-2 rounded-full bg-[#00C853] animate-pulse shrink-0" />
+                  <span className="text-[10px] font-bold uppercase text-[#00C853] flex items-center tracking-wider">
                     <span>POSISI CHIP MIKRO NFC</span>
                   </span>
                   <p className="text-[11px] text-white/80 mt-0.5 leading-snug">
@@ -219,8 +218,7 @@ export function WatermarkModal({ isOpen, onClose }: WatermarkModalProps) {
 
                 {/* Floating Tag Overlay Information */}
                 <div className="absolute top-4 left-4 bg-[#0F1F1A]/90 backdrop-blur-md border border-white/15 rounded-2xl p-3 max-w-xs">
-                  <span className="text-[10px] font-bold uppercase text-[#00C853] flex items-center gap-1.5 tracking-wider">
-                    <span className="w-2 h-2 rounded-full bg-[#00C853] animate-pulse shrink-0" />
+                  <span className="text-[10px] font-bold uppercase text-[#00C853] flex items-center tracking-wider">
                     <span>SEGEL OPTIK ANTI-TAMPER</span>
                   </span>
                   <p className="text-[11px] text-white/80 mt-0.5 leading-snug">
